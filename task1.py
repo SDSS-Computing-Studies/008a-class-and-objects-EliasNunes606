@@ -29,25 +29,33 @@ class student:
     courses = []
     grades = []
     
-    def __init__(self,name,studentNumber,grade): 
-        self.name = name
-        self.studentNumber = studentNumber
-        self.grade = grade
+    def __init__(self,a,b,c): 
+        self.name = a
+        self.studentNumber = b
+        self.grade = c
         pass
     
-    def getCourses(self, courses):
-        self.courses = courses
-    
+    def average(self):
+        classes = len(self.grades)
+        average = sum(self.grades) / classes
+        return average
+
     def getHonorRoll(self):
-        self.grades.sort
-        average = self.grades[0] + self.grades[1] + self.grades[2] + self.grades[3] + self.grades[4] / 7
-        if average > 86:
-            print("You made the honour roll!!!")
-        if average > 86:
-            print("Sadly you did not make the honour roll")
+        self.grades.sort()
+        average2 = self.grades[0], self.grades[1],self.grades[2], self.grades[3], self.grades[4]
+        if average2 > 86:
+            print("you made the honour roll")
+        pass
     
-    def getGrades(self, grades):
-        self.grades = grades
+    def showCourses(self,courses):
+        self.courses
+        return courses 
+        
+    def getCourses(self,courses):
+        self.courses = courses
+
+    def getGrades(self,grades):
+        self.grade = grades
 
 def main():
     
@@ -55,6 +63,8 @@ def main():
     st1 = student("Anita Bath","91334",11)
     st1.getCourses( ["English","Math","PE","Computers","History","Biology","Japanese"] )
     st1.getGrades( [91, 94, 87, 99, 82, 100, 73])
+
+    
 
     st2 = student("Joe Lunchbox","12346", 11)
     st2.getCourses( ["English","Math","Physics","Computers","Geography","Chemistry","French"] )
