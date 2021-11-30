@@ -29,33 +29,27 @@ class student:
     courses = []
     grades = []
     
-    def __init__(self,a,b,c): 
-        self.name = a
-        self.studentNumber = b
-        self.grade = c
-        pass
-    
-    def average(self):
-        classes = len(self.grades)
-        average = sum(self.grades) / classes
-        return average
+    def __init__(self, name, studentNumber, grade,):
+        self.grade = int(grade)
+        self.name = str(name)
+        self.studentNumber = int(studentNumber)
 
-    def getHonorRoll(self):
-        self.grades.sort()
-        average2 = self.grades[0], self.grades[1],self.grades[2], self.grades[3], self.grades[4]
-        if average2 > 86:
-            print("you made the honour roll")
-        pass
-    
-    def showCourses(self,courses):
-        self.courses
-        return courses 
-        
+
     def getCourses(self,courses):
         self.courses = courses
 
     def getGrades(self,grades):
-        self.grade = grades
+        self.grades = grades
+
+    def average(self):
+        x = sum(self.grades) / len(self.grades)
+        return x 
+
+    def getHonorRoll(self):
+        if sum(self.grades) / len(self.grades) > 85:
+            return True
+        else:
+            return False
 
 def main():
     
